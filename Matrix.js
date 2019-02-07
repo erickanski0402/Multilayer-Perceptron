@@ -72,4 +72,32 @@ class Matrix{
       }
     }
   }
+
+  transpose(){
+    let result = new Matrix(this.cols, this.rows);
+
+    for(let i = 0; i < this.rows; i++){
+      for(let j = 0; j < this.cols; j++){
+        result.matrix[j][i] = this.matrix[i][j];
+      }
+    }
+
+    return result;
+    // let newRows = this.cols;
+    // let newCols = this.rows;
+    // let newMatrix = [];
+    //
+    // for(let i = 0; i < this.cols; i++){
+    //   let row = [];
+    //   for(let j = 0; j < this.rows; j++){
+    //     row.push(this.matrix[i][j])
+    //   }
+    //   console.log(row)
+    //   newMatrix.push(row);
+    // }
+    //
+    // this.rows = newRows;
+    // this.cols = newCols;
+    // this.matrix = newMatrix;
+  }
 }
