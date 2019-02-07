@@ -63,7 +63,11 @@ class Matrix{
         }
       }
 
-      return result;
+      this.rows = result.rows;
+      this.cols = result.cols;
+      this.matrix = result.matrix;
+
+      //return result;
     }else{
       for(let i = 0; i < this.rows; i++){
         for(let j = 0; j < this.cols; j++){
@@ -82,7 +86,11 @@ class Matrix{
       }
     }
 
-    return result;
+    this.rows = result.rows;
+    this.cols = result.cols;
+    this.matrix = result.matrix;
+
+    //return result;
     // let newRows = this.cols;
     // let newCols = this.rows;
     // let newMatrix = [];
