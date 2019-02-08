@@ -31,6 +31,8 @@ class Matrix{
         arr.push(this.data[i][j]);
       }
     }
+
+    return arr;
   }
 
   randomize(){
@@ -49,6 +51,22 @@ class Matrix{
       for(let j = 0; j < this.cols; j++){
         let val = this.data[i][j];
         this.data[i][j] = func(val);
+      }
+    }
+  }
+
+  add(n){
+    if(n instanceof Matrix){
+      for(let i = 0; i < this.rows; i++){
+        for(let j = 0; j < this.cols; j++){
+          this.data[i][j] += n.data[i][j];
+        }
+      }
+    }else{
+      for(let i = 0; i < this.rows; i++){
+        for(let j = 0; j < this.cols; j++){
+          this.data[i][j] += n;
+        }
       }
     }
   }
