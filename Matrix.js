@@ -55,6 +55,19 @@ class Matrix{
     }
   }
 
+  static map(m, func){
+    //'Lambda' function. Takes a generic function as an argument and applies
+    //  it's return value to each spot in this matrix
+    let result = new Matrix(m.rows, m.cols);
+
+    for(let i = 0; i < m.rows; i++){
+      for(let j = 0; j < m.cols; j++){
+        let val = m.data[i][j];
+        result.data[i][j] = func(val);
+      }
+    }
+  }
+
   add(n){
     if(n instanceof Matrix){
       for(let i = 0; i < this.rows; i++){
