@@ -66,6 +66,8 @@ class Matrix{
         result.data[i][j] = func(val);
       }
     }
+
+    return result
   }
 
   add(n){
